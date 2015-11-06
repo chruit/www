@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block title %} Contact Us {% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid blackborder">
+<!-- 	<h2>CHRU Contact Details</h2> -->
+	<div class="row whiterow">
+		<br>
+		<div class="col-lg-4 col-lg-offset-1">
+			<h3>Location</h3>
+			<p>The CHRU is located in downtown Seattle, Washington approximately three miles south-southwest of the University of Washington and approximately 1 mile north-northwest of Harborview Medical Center.   We are located on the 13th floor of Metropolitan Park East.</p>
+			<br>
+			<h3>Parking</h3>
+			<p>Parking is available in our building, the surrounding buildings, pay lots, and on the street.</p>  
+			<br>
+			<h3>Driving from I-5</h3>
+			<p>Navigating to Met Park East can be challenging for drivers unfamiliar to the area approaching from I-5.  We suggest using the path shown on the right to find parking.</p>
+		</div>
+		<div class="col-lg-6">
+			<a ><img class="resizephoto" src="{{ STATIC_URL }}img/directions_near.png"></a>
+		</div>
+	</div>
+	<div class="row whiterow">
+		<br>
+		<div class="col-lg-4 col-lg-offset-1">
+			<h3>Taking the bus</h3>
+			<p>For bus service between the University of Washington (University District) and 
+Metropolitan Park, routes 25, 43, 49, 66, 71, 72, and 73 are usually convenient.  
+Please consult the <a href='http://tripplanner.kingcounty.gov'>Metro web site</a> or call 206-553-3000 for route information and times.  We also recommend using <a href='http://onebusaway.org'>OneBusAway</a></p>
+			<br>
+			<h3>Access from downtown</h3>
+			<p> Accessing our building from downtown transit service provides plenty of options.</p>
+		</div>
+		<div class="col-lg-6">
+			<a ><img class="resizephoto" src="{{ STATIC_URL }}img/directions_downtown.png"></a>
+			<br>
+		</div>
+	</div>	
+	<div class="row whiterow">
+		<br>
+	</div>
+</div>
+<!-- </div> -->
+{% endblock %}

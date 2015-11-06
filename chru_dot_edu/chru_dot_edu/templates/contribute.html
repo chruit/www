@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block title %} Contribute {% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+<h1>Contribute to cardiovascular health research</h1>
+{# <form action="{% url 'contribute' 1 %}" method="post">	 #}
+<form action="." method="post">	
+	{% csrf_token %}
+	<table>
+		<tr> 
+			<td>Name:</td>
+			<td>{{ form.name }}</td>
+		</tr>
+		<tr>
+			<td>Message:</td>
+			<td>{{ form.message }}</td>
+		</tr>
+		<tr>
+			<td>E-mail:</td>
+			<td>{{ form.sender }}<td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit" >
+
+</form>
+</div>
+<!-- </div> -->
+{% endblock %}

@@ -1,0 +1,33 @@
+{% url 'chru_dot_edu.views.index' as front %}
+{% url 'chru_dot_edu.views.research' as research %}
+{% url 'chru_dot_edu.views.people' as people %}
+{% url 'chru_dot_edu.views.education' as education %}
+{% url 'chru_dot_edu.views.contact' as contact %}
+{% url 'chru_dot_edu.views.support' as support %}
+
+<header role="banner">
+  <div class="wrapper">
+    <img id="chru_banner" src="{{ STATIC_URL }}img/cardio-hlth-rsrch_uw_sml.png" alt="Cardiovascular Health Research Unit">
+  </div>
+  <div class="navbar navbar-inverse ">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav class="collapse navbar-collapse navbar.center" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="{% ifequal request.path front %}active{% endifequal %}"><a href="{{front}}">About Us</a></li>
+          <li class="{% ifequal request.path research %}active{% endifequal %}"><a href="{{research}}">Research</a></li>
+          <li class="{% ifequal request.path people %}active{% endifequal %}"><a href="{{people}}">People</a></li>
+          <li class="{% ifequal request.path education %}active{% endifequal %}"><a href="{{education}}">Education</a></li>
+          <li class="{% ifequal request.path contact %}active{% endifequal %}"><a href="{{contact}}">Location</a></li>
+          <!--<li class="{% ifequal request.path support %}active{% endifequal %}"><a href="{{support}}">Support</a></li>-->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

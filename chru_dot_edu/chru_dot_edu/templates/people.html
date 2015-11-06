@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}CHRU Members {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid blackborder">
+
+    <div class="row whiterow">
+        <div class="col-lg-6 col-lg-offset-1">
+            <br>
+            <h2>Researchers</h2>
+            <br>
+        </div>
+        <div class="col-lg-2 col-lg-offset-1"> 
+        </div>
+    </div>
+
+	<div class="row whiterow">
+        <div class="col-lg-2 col-lg-offset-1">
+            <br>
+            <div class="panel panel-default">
+                <div class="list-group">
+                    <a href="#investigators" class="list-group-item">
+                    <p class="list-group-item-text">Investigators</p>
+                      </a>
+                      <a href="#employees" class="list-group-item">
+                        <p class="list-group-item-text">Employees</p>
+                      </a>
+                    <a href="#trainees" class="list-group-item">
+                        <p class="list-group-item-text">Trainees</p>
+                      </a>
+                </div>
+            </div>
+        </div>
+		<div class="col-lg-6 col-lg-offset-1 ">
+            <p>  
+            <br>
+            Our multidisciplinary team is comprised of physicians (cardiologists, neurologists, pulmonologists, nephrologists, sleep experts, general internists), epidemiologists, biostatisticians, bioinformaticians, pharmacoepidemiologists, health services researchers, biochemists, dieticians and computer scientists.</p> 
+	    </div>
+		<div class="col-lg-2 col-lg-offset-1">
+            <br>
+        </div>
+        <br>
+	</div>
+
+<div class="row whiterow">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-8 col-lg-offset-1">
+            <img class="resizephoto" src="{{ STATIC_URL }}img/CHRU_2013_small.jpeg"> 
+    </div>
+    <div class="col-lg-1">
+    </div>
+</div>
+<div id="investigators">
+	{% include "faculty_list.html" %}
+</div>
+
+<div id="employees">
+	{% include "staff.html" %}
+</div>
+
+<div id="trainees">
+	{% include "trainees.html" %}
+</div>
+{% endblock %}

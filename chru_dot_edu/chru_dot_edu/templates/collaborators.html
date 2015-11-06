@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}CHRU Collaborators {% endblock %}
+
+{% block content %}
+
+<div class="container blackborder">
+ 
+  <div class="row whiterow">
+    <div class="col-lg-4">
+      <h2>UW Medicine</h2>
+      <p><a href="http://www.uwmedicine.org/">UW Medicine’s</a> mission is to improve the health of the public by advancing medical knowledge, providing outstanding primary and specialty care to the people of the region, and preparing tomorrow’s physicians, scientists and other health professionals. 
+
+      UW Medicine owns or operates Harborview Medical Center, Northwest Hospital & Medical Center, Valley Medical Center, University of Washington Medical Center, a network of nine UW Neighborhood Clinics that provide primary care and secondary care, the physician practice UW Physicians, the UW School of Medicine and Airlift Northwest. </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>Group Health</h2>
+      <p><a href="http://www.ghc.org/">Group Health Cooperative</a> is a member-governed, nonprofit health care system that coordinates care and coverage. Founded in 1947 and based in Seattle, Wash., Group Health and its subsidiary health carriers, Group Health Options, Inc. and KPS Health Plans, serve more than 600,000 residents of Washington and North Idaho. 
+
+      <a href="http://www.grouphealthresearch.org/">Group Health Research Institute</a> (GHRI) is a non-proprietary, public-domain research institution within Group Health, a health care system based in Seattle, Washington. To serve its mission, GHRI conducts and disseminates research and evaluation on: the organization, delivery, quality, and cost of health care; prevention, treatment, and management of illness; and strategies at the individual, provider, system, community, and policy levels that result in better health outcomes.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2>UW School of Public Health</h2>
+      <p><a href="http://sph.washington.edu">The School of Public Health</a> is dedicated to education, research, and service that promotes the health and well-being of communities locally, nationally, and globally.  Faculty and students from the Departments of <a href="http://depts.washington.edu/epidem/">Epidemiology</a> and <a href="http://www.biostat.washington.edu/">Biostatistics</a> are key members of the CHRU investigative team.</p>
+    </div>
+  </div>
+
+  {% url 'chru_dot_edu.views.research' as research %}
+
+  <div class="row whiterow">
+    <div class="col-lg-4">
+      <h2><a href="http://www.kingcounty.gov/healthservices/health/ems.aspx">Seattle and King County Public Health Department's Emergency Medical Service</a></h2>
+      <p>Any time you call 9-1-1 for a medical emergency, you are using the Medic One/EMS system. This internationally renowned regional system provides service to the residents of Seattle and King County, responding to an area of 2,134 square miles and serving a population of over 1.9 million. The system is managed by the King County Emergency Medical Services (EMS) Division and relies on complex partnerships with fire departments, paramedic agencies, EMS dispatch centers, and hospitals to make the program seamless and successful.
+
+      The Medic One/EMS System in King County is distinctive from other systems in that it is (a) medically based, (b) regional, and (c) uses tiered out-of-hospital response.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2><a=href="http://www.kingcounty.gov/healthservices/health/ems/MedicOne.aspx">Medic One</a></h2>
+      <p>King County Medic One is a public service organization, a critical link in our regional Emergency Medical Service system, providing high quality, advanced patient care.
+      
+      Founded in 1976, King County Medic One paramedics are trained by the world renowned University of Washington / Harborview Medical Center / Seattle Fire Department paramedic training program.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h2><a href="http://depts.washington.edu/uwnorc/">Nutrition Obesity Research Center</a></h2>
+      <p><a href="http://depts.washington.edu/uwnorc/">The Nutrition Obesity Research Center </a>(NORC) promotes research on nutrition and obesity at the University of Washington. 
+        The CHRU has a long-standing collaboration with the NORC. David Siscovick is a NORC Affiliate Investigator and the NORC Analytic Core processes samples for the <a href="{{research}}#CABS">CABS-Repository</a>. In addition, NORC investigators are currently collaborating with CHRU investigators and developing new laboratory assays for future projects. 
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

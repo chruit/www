@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+
+{% block title %}Research at the CHRU {% endblock %}
+
+{% block content %}
+
+{% url 'chru_dot_edu.views.research_archives' as research_archives %}
+
+<div class="container-fluid blackborder">
+
+    <div class="row whiterow">
+        <div class="col-lg-6 col-lg-offset-1">
+        <br>
+            <h2>Research Overview</h2>
+        <br>
+        </div>
+        <div class="col-lg-2 col-lg-offset-1"> 
+        </div>
+    </div>
+
+    <div class="row whiterow">
+        <div class="col-lg-2 col-lg-offset-1">
+            <br>
+            <div class="panel panel-default">
+                <div class="list-group">
+                  <a href="#studies" class="list-group-item">
+                    <!-- <h4 class="list-group-item-heading">CABS</h4> -->
+                    <p class="list-group-item-text">Studies</p>
+                  </a>
+                  <a href="#grants" class="list-group-item">
+                    <!-- <h4 class="list-group-item-heading">CARDIA</h4> -->
+                    <p class="list-group-item-text">Ongoing Projects</p>
+                  </a>
+                  <a href="#activities" class="list-group-item">
+                    <!-- <h4 class="list-group-item-heading">CARDIA</h4> -->
+                    <p class="list-group-item-text">Activities</p>
+                  </a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-lg-offset-1">
+            <p>
+            The CHRU conducts epidemiologic, pharmacoepidemiologic, pharmacogenetic and health-services research addressing cardiovascular disease risk factors and outcomes in adults. We collaborate extensively with local institutions in the Pacific Northwest, such as the Group Health Research Institute, Seattle-King County Health Department's Emergency Medical Services (EMS), the Seattle Medic One Program, and the University of Washington Nutrition Obesity Research Center, to perform population and patient-oriented research to study causes and treatments for cardiovascular diseases such as myocardial infarction, stroke, sudden cardiac death, atrial fibrillation, pulmonary embolism, and heart failure.  The collaborations extend nationally and internationally, including the Cohorts for Health and Aging Research in Genomic Epidemiology (CHARGE) Consortium and the US Food and Drug Administration’s Mini-Sentinel Initiative.  
+            </p>
+            <p>
+            Funding of our research is primarily from public sources such as the <a href="http://www.nhlbi.nih.gov/">National Heart, Lung, and Blood Institute</a> (NHLBI) and <a href="http://www.nia.nih.gov/">National Institute on Aging</a> (NIA) within the <a href="http://www.nih.gov/">National Institutes of Health</a> and the US Food and Drug Administration. We are also recipients of funds from non-profit organizations and foundations such as the <a href="http://www.heart.org/">American Heart Association</a> (AHA), Locke Charitable Foundation, and the Medic One Foundation. Below is a list of current projects that are part of the CHRU portfolio.  Listed are project titles, principal investigators, and a brief description of the scope of the work.   
+            </p>
+        </div>
+    </div>
+
+    <div class="row whiterow">
+        <br>
+        <div class="col-lg-10 col-lg-offset-1" id="studies">
+            <h2>Studies</h2>
+            <div id="CABS">
+                <h3>CABS-R</h3>
+                <p>The Cardiac Arrest Blood Study Repository (CABS-R) is a large community-based repository of data and specimens from adult out-of-hospital cardiac arrest patients who were attended by paramedics in Seattle and King county, Washington. CABS-R is a unique resource for research on the determinants of cardiac arrest risk and resuscitation outcomes following cardiac arrest.</p>
+            </div>
+            <div id="CHS">
+                <h3>CHS</h3>
+                <p><a href="https://chs-nhlbi.org/">The Cardiovascular Health Study</a> (CHS) is a population-based longitudinal study of cardiovascular disease among adults aged 65 years or older from 4 U.S. communities (Forsyth County, North Carolina; Sacramento County, CA; Washington Country, Maryland; Allegheny County, Pennsylvania).  Dr. David Siscovick and Dr. Bruce Psaty are principal investigators of the CHS, and have been actively involved in the CHS from its conception in 1989. The CHRU investigators and staff are actively involved in several on-going projects that use CHS data, including analyses related to diet, biomarkers, cardio-metabolic risk factors, and cardiovascular disease. 
+                </p>
+            </div>
+            <div id="CHARGE">
+                <h3>CHARGE</h3>
+            	<p><a href="http://web.chargeconsortium.com/">The Cohorts for Heart and Aging Research in Genomic Epidemiology</a> (CHARGE) Consortium was formed to facilitate genome-wide association study meta-analyses and replication opportunities among multiple large and well-phenotyped longitudinal cohort studies. CHRU researchers contribute to CHARGE primarily through their affiliation with the Cardiovascular Health Study (CHS), which, along with the Age, Gene, Environment, Susceptibility Study -- Reykjavik, Atherosclerosis Risk in Communities Study, Framingham Heart Study, and Rotterdam Study, is among the consortium's founding cohorts. 
+        		As part of the CHARGE consortium, CHS has contributed to large-scale genome-wide association meta analyses, targeted sequencing, whole exome sequencing, and whole genome sequencing efforts to better understand how human genetics contributes to heart disease and aging. CHRU faculty and staff participate actively in a variety of phenotype working groups and have developed and implemented guidelines and software for the efficient and appropriate analysis of genomic data. 
+
+        		Bruce Psaty is the Principal Investigator for the CHARGE infrastructure grant, which supports semi-annual investigator meetings and provides training opportunities for junior investigators and postdocs, and for the CHARGE pharmacogenetics grant, which supports research of gene-drug interactions.
+            	</p>
+            </div>
+            <div id="HVH">
+                <h3>HVH</h3>
+                <p>The Heart and Vascular Health (HVH) Studies have been ongoing at Group Health for nearly 20 years.  This set of related studies allows investigators the opportunity to evaluate risk factors that affect the onset or course of a variety of cardiovascular diseases, including heart attacks, strokes, blood clots in the legs or lungs, and heart rhythm problems.  </p>
+            </div>
+            <div id="MESA">
+                <h3>MESA</h3>
+                <p> The <a href="http://www.mesa-nhlbi.org/">Multi-Ethnic Study of Atherosclerosis</a> (MESA) is a population-based study of the characteristics and progression of cardiovascular disease. MESA researchers study an ethnically diverse sample of 6,814 asymptomatic men and women aged 45-84. Thirty-eight percent of the recruited participants are white, 28 % African-American, 22 % Hispanic, and 12 % Asian, predominantly of Chinese descent, as well as 2,128 additional individuals from 594 families recruited through MESA Family by utilizing the existing MESA framework, yielding 3,026 sibling pairs divided between African Americans and Hispanic-Americans. Participants were recruited from six field centers across the United States: Wake Forest University, Columbia University, Johns Hopkins University, University of Minnesota, Northwestern University and University of California - Los Angeles.</p>
+            </div>
+            <div id="PROA">
+                <h3>ProArrhythmia</h3>
+                <p>
+                Proarrhythmia is an instance of arrhythmia—irregular heartbeat—precipitated by the use of medication.  This study was founded to examine the cardiac safety of commonly-used medications using a population-based case-control study nested within the dynamic cohorts of 9 large health maintenance organizations (HMOs).  Research has been focused on risk of out-of-hospital cardiac arrest due to heart disease associated with drug therapies that alter cardiac conduction and autonomic function—physiological effects that may result in proarrhythmia.
+                </p>
+            </div>
+            <div id="WHI">
+                <h3>WHI</h3>
+                <p>
+                <a href=https://cleo.whi.org/SitePages/Home.aspx>The Women's Health Initiative (WHI)</a> is a long-term study funded by the National Heart, Lung, and Blood Institute and focused on strategies for preventing heart disease, breast and colorectal cancer, and osteoporotic fractures in postmenopausal women. These chronic diseases are the major causes of death, disability, and frailty in older women of all races and socioeconomic backgrounds. The WHI involves 161,808 women 50-79 years of age, and includes clinical trials of hormone therapy, dietary modification, and supplementation with vitamin D and calcium. It also includes an observational study examining the relationship of lifestyle, health, and risk factors with specific disease outcomes, and it includes Extension Studies in which additional health information is collected from consenting participants during long-term follow-up. Drs. Heckbert, Psaty, and Siscovick have participated in the WHI as Co-investigators; Dr. Heckbert is Principal Investigator of the current UW subcontract and is active in outcomes adjudication.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row whiterow">
+        <br>
+        <div class="col-lg-10 col-lg-offset-1" id="grants">
+            <h2>Ongoing Projects</h2>
+            <br>
+            <div id="AASCA">
+                <h4>Genomics of Sudden Cardiac Arrest Among African-Americans</h4>
+                <p>
+                Sudden cardiac arrest (SCA) is a major public health concern, particularly among African Americans where risk of cardiac arrest is higher than that of the general population, and survival is poor.  Genomics of Sudden Cardiac Arrest Among African-Americans is a multi-center collaborative effort to identify and characterize genetic factors conferring susceptibility to SCA among African Americans.  The project includes analysis of rare and common genetic variation and functional dissection of variants associated with SCA in mice and zebrafish.  Few studies have examined the genetic risk factors for SCA among those of African descent, and this project aims to provide insights into SCA mechanisms and contribute to the development of novel drug therapies
+                </p>
+                <br>
+            </div>    
+            <div id="ECA">
+                <h4>Rare Variants and NHLBI Traits in Deeply Phenotyped Cohorts</h4>
+                <p>
+                Rare variant genome-wide association studies (GWAS), using the Illumina ExomeChip, offer a chance to expand upon the results of common variant GWAS, which typically explain only 5-10% of genetic contribution to phenotypic variance.  This study uses ExomeChip data from over 50,000 participants in the CHARGE Consortium in order to meet the significant sample size requirements for high quality analysis. Using the available ExomeChip coding-region genotype data from CHARGE, the primary aim is to discover novel candidate genes and putative functional variants for high-priority heart, lung and blood phenotypes in multi-ethnic cohorts
+                </p>
+                <br>
+            </div>  
+            <div id="ECGSCA">
+                <h4>Novel ECG Measures & Risk of SCD</h4>
+                <p>
+                Cardiovascular mortality and in particular, sudden cardiac death (SCD) is the leading cause of death in the adult US population.  The overwhelming majority of SCD cases occur in subjects without known heart disease.  Development of an intervention strategy to prevent SCD is urgently needed, and an essential first step is to determine the population at risk.
+                An ECG is easily available, inexpensive and is a non-invasive tool carrying valuable information.  CHRU researchers recently developed a 12-lead ECG SCD risk score which classifies patients into lower and higher SCD risk.
+                This study aims to stratify patients into high-, intermediate-, and low-risk groups to improve classification compared to traditional coronary heart disease risk factors.  It also uses genetic data from ARIC and CHS cohorts to identify novel heritable factors.
+                </p>
+                <br>
+            </div>  
+            <div id="EKGExome">
+                <h4>Genomics of Cardiac Electrical Activity and Arrhythmia</h4>
+                <p>
+                Abnormalities in cardiac electrical activity on the surface electrocardiogram can lead to cardiac arrhythmias and adverse outcomes (atrial fibrillation and sudden cardiac death), potentially resulting in the placement of cardiac pacemakers and/or defibrillators.  This project seeks to identify whether genetic variation within biologically functional coding regions is associated with cardiac electrical activity and arrhythmia in the general population.  To accomplish this, CHRU researchers have established the Cohorts for Heart and Aging Research in Genomic Epidemiology Exome Chip (CHARGE-EX) EKG consortium.  CHARGE-EX encompasses 23 total cohorts and four ethnic groups (European, African, Hispanic, and East Asian descent individuals) with which to investigate rare variants and coding sequences for specific targeted genes.  Additionally, researchers functionally validate and dissect these genetic findings in zebrafish.
+                </p>
+                <br>
+            </div>  
+            <div id="FA">
+                <h4>Circulating Dietary & Metabolic Fatty Acids, Major Cardiovascular Outcomes, & Health Aging</h4>  
+                <p>
+                While innovative research has begun to elucidate the role of individual fatty acids (FA) in human health, this work has historically focused on broad categories of dietary fats and relied on self-reported estimates from questionnaires.  
+                This CHRU study focuses on circulating FA biomarkers that provide objective measures of exposure to both dietary and metabolic FA.  Researchers at CHRU have found several specific individual FA to be significantly associated with important cardiovascular disease outcomes, including congestive heart failure, atrial fibrillation, coronary heart disease and stroke.  These FA are both those derived from diet and those derived from endogenous metabolic processes. This project is ongoing, with researchers elucidating the role of age on circulating FA.
+                </p>
+                <br>
+            </div>  
+
+            <div id="GenFA">
+                <h4>Genetic Variation in Fatty Acid Metabolism and Sudden Cardiac Arrest</h4>
+                <p>
+                This study aims to examine whether common genetic variation in fatty acid (FA) metabolic pathways is associated with sudden cardiac arrest (SCA) risk in humans.  This investigation involves genetic epidemiology, statistical genetics, molecular cardiology, genomics, and fatty acid metabolism with DNA and clinical data assembled over the past 18 years from several large populations.  Investigators are examining blood samples and clinical data from 2600 European-American and 450 African-American SCA cases, primarily drawing from the Cardiac Arrest Blood Study Repository (CABS-R).  Similarly, 2600 European American and 900 African-American controls will be drawn from two population-based studies of cardiovascular disease conducted in the same Washington State county as CABS-R. 
+                </p>
+                <br>
+            </div>  
+            <div id="GWASSCA">
+                <h4>Genome-Wide Study of Sudden Cardiac Arrest Risk in the Community</h4>
+                <p>
+                While there is evidence of familial aggregation, candidate genes, and the molecular genetics of inherited arrhythmias that genetic variation influences susceptibility to sudden cardiac arrest (SCA), at the beginning of this study the genetic architecture of SCA in the community remained unknown.  
+                Consequently, this study has aimed to identify novel associations of common genetic variation across the genome with SCA, using a case-control, genome-wide association study (GWAS), design.  Through three stages, GWAS-SCA has conducted an initial GWAS search of approximately 4,500 cases and >20,000 controls (stage 1), a fine mapping of 100 genomic regions in 4500 SCA cases and matched controls(stage 2) and a replication in an independent sample of 1000 SCA cases and controls (stage 3).  Analysis continues, providing insight into the mechanisms of SCA that may help to target interventions to reduce mortality from SCA.
+                </p>
+                <br>
+            </div>  
+            <div id="HVHInsulin">
+                <h4>The Cardiovascular Safety of Combination Therapies for Type 2 Diabetes Mellitus</h4>
+                <p>
+                Investigators are evaluating the cardiovascular safety of using oral diabetes medications after beginning insulin therapy for treatment of type 2 diabetes mellitus (DM).  CHRU has previously studied the cardiovascular safety of other classes of medications within the setting of Group Health Cooperative.  Investigators are leveraging these existing data to evaluate the cardiovascular safety of combinations of oral glucose-lowering therapies.
+                </p>
+                <br>
+            </div>  
+            <div id="PHGCHARGE">
+                <h4>Prospective Meta-Analyses of Drug-Gene Interactions: CHARGE GWAS Consortium</h4>
+                <p>
+                The benefits of modern drug therapies can be maximized by avoiding some medications in patients who are genetically susceptible to adverse reactions or by selecting other medications for patients who are genetically likely to benefit.  In this study investigators use genome-wide association studies (GWAS) methods to identify novel variants and pathways that affect drug response.  Investigators have access to genome-wide data on more than 57,000 participants, and will be looking at reactions to an array of adverse drug effects.  These include but are not limited to, sulfonylurea antidiabetic agents, thiazide diuretics, high-torsades-risk QT-prolonging drugs (selected antiarrhythmics, antihistamines, antibiotics, and antidepressants), and tri-cyclic or tetracyclic antidepressants.
+                </p>
+                <br>
+            </div>  
+            <div id="Rhabdo2">
+                <h4>Genomics and Pharmacodynamics of Statin-Related Rhabdomyolysis</h4>
+                <p>
+                Some statin users are susceptible to increased risk of myopathy or rhabdomyolysis.  This study uses sequencing of the exons (coding regions of the genes) to identify and characterize the genetic determinants and biologic mechanisms that underlie this toxic response to lipid-lowering statin drugs.
+                </p>
+                <br>
+            </div>  
+            <div id="TrainingGrant">
+                <h4>Cardiovascular Epidemiology Training Grant</h4>
+                <p>
+                The Training Grant has allowed CHRU to recruit outstanding pre-doctoral and post-doctoral trainees to the program. Trainees are able to exploit the considerable faculty and data resources at the University of Washington to address important scientific questions in cardiovascular epidemiology and prevention.  While here, trainees have established new collaborations and studies, and funds from this grant support small pilot studies and attendance at conferences. Many former trainees have continued their work at CHRU, including, among many others, current co-director Nona Sotoodehnia.     
+                </p>
+                <br>
+            </div> 
+
+            <div id="VTEIII">
+                <h4>Estrogens and Pharmacogenetic Risk of Venous Thrombosis in Postmenopausal Women</h4>
+                <p>This comparative-safety study investigates venous thrombosis (VT) as a side-effect of short-term use of several oral estrogen that a commonly used to treat menopausal symptoms in peri- and post-menopausal women.  Data on the comparative safety of oral estrogen products are limited and hinder women and their physicians from making evidence-based decisions when choosing an estrogen product.  Researchers at CHRU investigate conjugated equine estrogen (CEE), estradiol (E2) and esterified estrogen (EE) usage in the setting of Group Health Cooperative, a large integrated healthcare organization here in Washington State.  The study will provide high-quality data to begin to address important public health questions of women’s health.
+                </p>
+                <br>
+            </div>  
+            <div id="VTER">
+                <h4>Pharmacologic and Pharmacogenetic Associations with Recurrent Venous Thrombosis</h4>
+                <p>
+                Building on previous CHRU studies of incident venous thrombosis (VT), this project identifies risk factors for VT recurrence and to inform and guide treatment and prophylaxis decisions.  We have followed a cohort of 2,800 incident VT events ages 30-89 for up to 11 years to monitor subsequent VT recurrences. One focus of the project is on statins and beta-blockers, which epidemiologic evidence suggests are associated with decreased risk of VT, but for which there are no data on VT recurrence.  Additionally, CHRU is investigating potential biomarkers and drug-gene interactions and their associations with recurrent VT.
+                </p>
+                <br>
+            </div>  
+            <div id="WHISH">
+                <h4>Clinical Coordinating Center for the Women's Health Initiative 2010-2015 Extension Study
+                </h4>
+                <p>
+                CHRU investigator Dr. Susan Heckbert has been a co-investigator at the Women’s Health Initiative (see above) Clinical Coordinating Center (CCC) since 1995.  As part of this project, she mentors new investigators within WHI and collaborates with CCC and other scientists to generate hypotheses and develop analytic plans to study scientific questions of interest in WHI. Dr. Heckbert also participates in data analysis, interpretation of results, and manuscript preparation.
+                </p>
+                <br>
+            </div>       
+            <div id="K01VitD">
+                <h4>Vitamin D Metabolism Related Genetic Variations and Developmental Origins of Cardiometabolic Risk</h4>
+                <p>
+                Mounting evidence supports the developmental origins of cardiometabolic risk. Additionally, low vitamin D levels are associated with cardiometabolic risk factors. This project aims to investigate the role of vitamin D-related genetic variations in developmental origins of cardiometabolic risk (including birth weight, obesity, insulin resistance, abnormal lipids and lipoproteins, and hypertension) using biomarker, genotyping, and gene expression measurements. 
+                </p>
+                <br>
+            </div>
+            <div id="NEPAL">
+                <h4>Dhulikhel Health Study - A Cohort Study in Dhulikhel, Nepal
+                </h4>
+                <p>
+                The Dhulikhel Heart Study is a population-based longitudinal study following adults in the town of Dhulikhel in Nepal in order to study the risk and prevalence of cardiovascular diseases in the population, develop educational programs around cardiovascular disease (CVD) and its risk factors and implement screening for hypertension, diabetes and CVD within Dhulikhel.  Cardiovascular disease is worsening in Nepal, with high levels of metabolic syndrome and untreated hypertension. Low-income and developing countries including Nepal have seen a marked rise in CVD with relatively little study to match, and The Dhulikhel Heart Study is one of the first longitudinal studies carried out in such settings. 
+                </p>
+                <br>
+            </div>
+            <div id="Methyl">
+                <h4>Epigenetics / DNA Methylation and Cardiovascular and Cardiometabolic Phenotypes
+                </h4>
+            </div>
+            <div id="AFIB_MESA_JHS">
+                <h4>Atrial Fibrillation in MESA and JHS</h4>
+                <p>This project conducts research on a heart rhythm disorder, atrial fibrillation, using cohort study data and Medicare claims data from the Multi-Ethnic Study of Atherosclerosis and the Jackson Heart Study. We study whether extensive fat deposition around the heart is associated with enlargement of the left atrium over time and with the development of atrial fibrillation. We also lead an ECG/Arrhythmia Working Group to foster research on the epidemiology, pathophysiology, prevention, and treatment of heart rhythym disturbances.</p>
+                <br>
+            </div>
+            <div id="DET_ADCMR_AI">
+                <h4>Determinants of Activity, Diet, and Cardio-Metabolic Risk in American Indians
+                </h4>
+                <p>
+                The burden of cardio-metabolic diseases is exceedingly high among American Indians (AIs). In the Strong Heart Family Study (SHFS), 84% of American Indians were overweight/obese, 39% had hypertension, and 51% had type 2 diabetes at baseline. Although physical activity and diet are major determinants of cardio-metabolic risk, the promotion of physical activity and a healthy diet has done little to lower the burden of cardio-metabolic diseases in AIs. This may, in part, be due to a poor understanding of the social determinants of health behaviors and cardio-metabolic risk factors in this population. Without understanding the social-contextual factors that contribute to health behaviors and risk factors, the implementation of sustainable interventions is difficult. Moreover, investments in interventions that do not recognize and address the underlying social-contextual factors that give rise to health behaviors and cardio-metabolic risk factors may be ineffective. The purpose of this award is to:  (1) better understand the social determinants of physical activity, diet, and obesity-related cardio-metabolic risk factors; (2) integrate findings from social, physical activity, nutritional and cardiovascular epidemiology to inform the development of targeted a community-based culturally-appropriate pilot intervention for cardio-metabolic disease prevention among AIs. 
+                </p>
+                <br>
+            </div>
+            <div id="HIV">
+                <h4>Cardiovascular, Pulmonary and Hematological Disease in HIV: Prevention and Treatment
+                </h4>
+                <p>
+                Dramatic advances in treatments for HIV have changed the face of the HIV epidemic in the United States. People living with HIV are aging, and have
+                increased heart, lung, and blood diseases compared to people without HIV. This project will fill important gaps in our knowledge about risk factors for development and complications of these conditions in people living with HIV, leading to new prevention and treatment strategies.
+                </p>
+                <br>
+            </div>
+            <div id="AFIB_MESA_JHS">
+                <h4>Atrial Fibrillation in MESA and JHS</h4>
+                <p>This project conducts research on a heart rhythm disorder, atrial fibrillation, using cohort study data and Medicare claims data from the Multi-Ethnic Study of Atherosclerosis and the Jackson Heart Study. We study whether extensive fat deposition around the heart is associated with enlargement of the left atrium over time and with the development of atrial fibrillation. We also lead an ECG/Atrial Fibrillation Working Group to foster research on electrocardiographic traits and heart rhythm disturbances.</p>
+                <br>
+            </div>
+            <div id="CHS_Events">
+                <h4>CHS Events Follow-Up Study</h4>
+                <p>CHS Events Follow-Up Study is a continuation and expansion of the work done through the Cardiac Health Study (CHS).   CHS, a study of risk factors for coronary heart disease (CHD) and stroke,  examined 5888 participants for data such as traditional risk factors and measures of sub-clinical CHD and conducted regular follow-ups. In addition to continuing to analyze the existing data, the investigators are following up with surviving participants twice a year to identify and classify potential cardiac and cerebrovascular events.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="row whiterow">
+        <br>
+        <div class="col-lg-10 col-lg-offset-1" id="activities">
+            <h2>Other Activities</h2><br>
+            <div id="ADGWAS">
+                <h4>Exome Chip, New Endophenotypes & Functional Studies in CHARGE</h4>
+                <p>
+                A subgroup of the Cohorts for Heart and Aging Research in Genetic Epidemiology (CHARGE) was one of four founding consortia of the International Genomics of Alzheimer Project (IGAP) and investigated Alzheimer’s Disease heritability.  This project allows for a continuation of that work by using Illumina ExomeChip data to help explore the >65% of AD heritability that is still unexplained.  Investigators use the ExomeChip data to find rare genetic variants related to incident clinical AD and AD endophenotypes.  Additionally, investigators are studying gene-gene and gene-environment interactions related to AD.
+                </p>
+                <br>
+            </div> 
+            <div id="IMTAF">
+                <h4>Arterial Structure and Function in Atrial Fibrillation</h4>
+                <p>
+                This project is designed to explore whether measures of arterial structure and function, such as carotid intima-media thickness (cIMT) and pulse pressure, may be used to help predict atrial fibrillation (AF) and its sequelae.  AF is the most common sustained cardiac arrhythmia and its prevalence, particularly in the aging population, causes considerable morbidity, mortality and socioeconomic burden.  Better risk prediction of AF and its sequelae would enable us to identify individuals who will benefit from preventative interventions, helping reduce the burden of AF in the elderly population.
+                </p>
+                <br>
+            </div>   
+            <div id="LITE4">
+                <h4>Epidemiology of Venous Thrombosis and Pulmonary Embolism</h4>
+                <p>
+                This Longitudinal Investigation of Thromboembolism Etiology (LITE) is a project that aims to identify risk factors for deep thromboemolism and pulmonary embolism, and to better understand the etiology and possible prevention of VTE.  Working with the Atherosclerosis Risk in Communities (ARIC) study and the Cardiovardiovascular Health Study (CHS) cohorts, CHRU investigators are using biomarkers, fine-mapping and genetic association analysis to find associations with VTE.
+                </p>
+                <br>
+            </div> 
+            <div id="CardioTraits">
+                <h4>A Multi-Ethnic Study of Gene-Lifestyle Interactions in Cardio Traits</h4>
+                <p>
+                This project allows investigators to use extraordinary access to multi-ethnic studies and cohorts that have phenotypes, relevant lifestyle data and dense genotype data on common as well as rare variants in an effort to explore how the environment modulates genetic effects in influencing cardiovascular disease and its risk factors.  The project involves 25 cohorts with over 150,000 subjects, for whom investigators will study gene-lifestyle interactions, pleiotropy analysis and pathway analysis.  This data may offer important clues for intervention and novel therapeutic approaches.
+                </p>
+                <br>
+            </div>  
+            <div id="PROMPT">
+                <h4>Efforts to Develop the Sentinel Initiative: Improvements to Prospective Routine Observational Monitoring Programs Tools (PROMPT)
+                </h4>
+                <p>
+                The US Food and Drug Administration’s Mini-Sentinel project is designed to monitor the safety of FDA-regulated medical products. The aim of this research is to further test and enhance modular programming code to routinely and efficiently implement sequential design and analysis approaches.
+                </p>
+                <br>
+            </div>
+            <div id="RISK_HIV_MI">
+                <h4>Validating Cardiovascular Risk Estimates for Patients with HIV Using Adjudicated Myocardial Infarctions</h4>
+                <p>
+                This study examines the risk of myocardial infarction associated with antiretroviral medications, metabolic abnormalities, traditional cardiovascular disease risk factors, and other human immunodeficiency virus (HIV)-specific factors using longitudinal data from a large cohort collaboration of HIV-infected individuals.
+                </p>
+                <br>
+            </div>
+
+            <div>
+                <br>
+                <h3>Previous Projects</h3>
+                <p>
+                A list of prior projects can be found <a href="{{research_archives}}">here</a>
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

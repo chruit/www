@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}List of Publications - {{ block.super }} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="col-lg-6">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Publications</h3>
+	  </div>
+	  <div class="panel-body">
+
+		<ul class="list-group">
+		{% for pub in p_list %}
+			<li>{{ pub.pubmedid }}</li>
+			<li>{{ pub.title|linebreaks }}</li>
+			<li>{{ pub.date|linebreaks }}</li>
+			<li>{{ pub.stub|linebreaks }}</li>	
+		{% endfor %}
+		</ul>
+
+	  </div>
+	</div>	
+  </div>
+  <div class="col-lg-6">
+  </div>
+
+
+{% endblock %}

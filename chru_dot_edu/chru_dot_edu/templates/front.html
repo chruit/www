@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - {{ block.super }} {% endblock %}
+
+{% block content %}     
+<div class="container-fluid ">
+
+    <div class="row whiterow blackborder">
+        <div class="col-lg-10 col-lg-offset-1">
+          <br>
+            <p>The Cardiovascular Health Research Unit (CHRU) is a joint program of the UW’s Department of Medicine, Divisions of Cardiology and General Internal Medicine, and Group Health Research Institute, Group Health Cooperative, Seattle, WA. Investigators at the CHRU aim to develop and apply knowledge in order to prevent morbidity and mortality from cardiovascular diseases. Through the collaborative efforts of organizations and researchers based locally, nationally, and internationally, CHRU projects develop innovative approaches not only to the discovery of new biology through biomarkers and genomics, but also to the evaluation of prevention and treatment for cardiovascular disorders.  CHRU projects bridge medicine and public health to improve the cardiovascular health of the public.</p>
+          <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-lg-12">
+          <img class="resizephoto" src="{{ STATIC_URL }}img/seattle.jpg">  
+        </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,3 @@
+images for investigators are downsized to 220  vertical pixels for profile pages, or kept below 220 if they are smaller
+
+images for thumbnails are resized to 80 vertical pixels, and ideally 55 across.

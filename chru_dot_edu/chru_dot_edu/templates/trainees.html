@@ -1,0 +1,156 @@
+
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+		<br>
+		<h2>Active Trainees</h2>
+		<p>Students are the future leaders of research!</p>
+	</div>
+	<div class="col-lg-6">
+		<br><br>
+		<div class="panel panel-default">
+<!-- 			  <div class="panel-heading">
+		    <h3 class="panel-title">Current Students</h3>
+		  </div> -->
+		  <div class="panel-body">
+		  	<table class="table">
+<!-- 			  	<tr> 
+		  	<th>Name</th>
+		  	<th>Title</th>
+		  	</tr> -->
+			{% for chru_person in s_list %}
+				<tr>
+				    <td>{{ chru_person.full_name }}</td>
+				    <td>{{ chru_person.title }}</td>
+			    </tr>
+
+			{% endfor %}
+			</table>
+		  </div>
+		</div>	
+	</div>
+</div>
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+		<br>
+		<h2>Previous Trainees</h2>
+		<p>Over the years training grants have supported a large number of trainees</p>
+	</div>
+	<div class="col-lg-4 col-lg-offset-1">
+		<br><br>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		  	<table class="table">
+			<tr>
+			    <td>Helen Kim</td>
+		    </tr>
+		    <tr>
+			    <td>Tom Rea</td>
+		    </tr>
+		    <tr>
+			    <td>Elanor Sidman</td>
+		    </tr>
+		    <tr>
+			    <td>Alex Reiner</td>
+		    </tr>
+		    <tr>
+			    <td>David Brown</td>
+		    </tr>
+		    <tr>
+			    <td>Josh Bis</td>
+		    </tr>
+		    <tr>
+			    <td>Gina Schellenbaum Lovasi</td>
+		    </tr>
+		    <tr>
+			    <td>Nicole Glazer</td>
+		    </tr>
+		    <tr>
+			    <td>Jeannie Chan</td>
+		    </tr>
+		    <tr>
+			    <td>Nona Sotoodehnia</td>
+		    </tr>
+		    <tr>
+			    <td>Lucia Hindorff</td>
+		    </tr>
+		    <tr>
+			    <td>Catherine Johnson</td>
+		    </tr>
+			<tr>
+			    <td>Cara Carty</td>
+		    </tr>
+		    <tr>
+			    <td>Daniel Enquobahrie</td>
+		    </tr>
+		    <tr>
+			    <td>Kristin Marciante</td>
+		    </tr>
+		    <tr>
+			    <td>Kiyon Chung</td>
+		    </tr>
+		    <tr>
+			    <td>Matthew Thomas</td>
+		    </tr>
+		    <tr>
+			    <td>Amanda Fretts</td>
+		    </tr>
+		    <tr>
+			    <td>Inbal Boger-Megiddo</td>
+		    </tr>
+		    <tr>
+			    <td>Rich Jensen</td>
+		    </tr>
+		    <tr>
+			    <td>Evan Thacker</td>
+		    </tr>
+		    <tr>
+			    <td>Victor Van Hee</td>
+		    </tr>
+		    <tr>
+			    <td>Renu Garg</td>
+		    </tr>
+		    <tr>
+			    <td>Astrid Suchy-Dicey</td>
+		    </tr>
+		    <tr>
+			    <td>Erin Wallace</td>
+		    </tr>
+		    <tr>
+			    <td>April Wicks</td>
+		    </tr>
+		    <tr>
+		    	<td>Arend Voorman</td>
+		    </tr>
+		    <tr>
+		    	<td>Paul Jensen</td>
+		    </tr>
+		    <tr>
+		    	<td>Alison Kosel</td>
+		    </tr>
+			<tr>
+			    <td>James Floyd</td>
+		    </tr>
+		    <tr>
+			    <td>Melody Hwang</td>
+		    </tr>
+		    <tr>
+			    <td>Sheldwin Yazzie</td>
+		    </tr>
+		    <tr>
+			    <td>Luke Wander</td>
+		    </tr>
+		    <tr>
+			    <td>Gloria Chi</td>
+		    </tr>
+		    <tr>
+		    	<td>Joanna Ghobrial</td>
+		    </tr>
+		    <tr>
+		    	<td>Laura Harrington</td>
+		    </tr>
+			</table>
+
+		  </div>
+		</div>	
+	</div>
+</div>	

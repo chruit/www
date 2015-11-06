@@ -1,0 +1,36 @@
+
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+		<br>
+		<h2>Research and Administrative Staff</h2>
+		<p>Employees at the CHRU are responsible for the day to day operations.  The contributions
+		of staff employees span data entry, data collection, data analysis and contributions to manuscripts.  Additionally, staff provide support with payroll, grant applications, and educational activities.</p>
+	</div>
+	<div class="col-lg-6">
+		<br><br>
+		<div class="panel panel-default">
+<!-- 
+		  <div class="panel-heading">
+		    <h3 class="panel-title">List of Employees</h3>
+		  </div> -->
+		  <div class="panel-body">
+
+		  	<table class="table">
+<!-- 			  	<tr> 
+		  	<th>Name</th>
+		  	<th>Title</th>
+		  	</tr> -->
+			{% for chru_person in e_list %}
+				<tr>
+				    <td>{{ chru_person.full_name }}</td>
+				    <td>{{ chru_person.title }}</td>
+			    </tr>
+
+			{% endfor %}
+			</table>
+
+		  </div>
+		</div>	
+	</div>
+</div>
+

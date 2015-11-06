@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Faculty Page for {{ faculty_member.full_name }} {% endblock %}
+
+{% block content %}
+
+<div class="blackborder container-fluid" >
+	<div class="row whiterow">
+		<div class="col-lg-6">
+			<table>
+				<tr>
+					<td><div class="text-center" style=padding-bottom:30px;padding-top:30px>
+						<a ><img class="resizephoto" src="{{ STATIC_URL }}img/{{ faculty_member.uwnetid}}.jpg"></a>
+					</div></td>
+					<td>
+						<table>
+							<tr><h3>{{ faculty_member.full_name }}</h3></tr>
+							<tr>{{ faculty_member.title|linebreaks }}</tr>
+							<tr>{{ faculty_member.uwnetid }}<img height="15" src="{{ STATIC_URL }}img/bw_ampersand.png" width="15">u.washington.edu</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div>
+				<h4>Education</h4>
+				<p>
+					{{ faculty_member.education|linebreaks }}
+				</p>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<br>
+			<div>
+				<h4>Interests</h4>
+				<p>
+					{{ faculty_member.interests|linebreaks }}
+				</p>
+			</div>
+			<br>
+			<div>
+				{% if faculty_member.honors %}
+					<h4>Honors</h4>
+					<p>
+						{{ faculty_member.honors|linebreaks }}
+					</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% if faculty_member.about %}
+	<div class="row whiterow">
+		<div class="col-lg-12">
+			<br>
+			<div>
+				<h4>About</h4>
+				<p> 
+					{{ faculty_member.about|linebreaks }}
+				</p>
+			</div>
+		</div>
+	</div>
+	{% endif %}	
+	{% if faculty_member.urls %}
+	<div class="row whiterow">
+		<div class="col-lg-12">
+			<br>
+			<div>
+				<h4>Links of Interest</h4>
+				<p> 
+					{{ faculty_member.urls|safe }}
+				</p>
+			</div>
+		</div>
+	</div>
+	{% endif %}	
+	{% if publications %}
+	<div class="row whiterow">
+		<div class="col-lg-12">
+			<br>
+			<div>
+				<h4>Publications</h4>
+				<p>
+					{% for publication in publications %}
+
+						<p>{{ publication.stub|striptags|safe }}
+							<a href="http://www.ncbi.nlm.nih.gov/pubmed/{{publication.pubmedid }}">PMID:{{publication.pubmedid }}</a> </li>
+						</p>
+					{% endfor %}
+				</p>
+			</div>
+		</div>
+	</div>
+	{% endif %}	
+</div>
+
+{% endblock %}

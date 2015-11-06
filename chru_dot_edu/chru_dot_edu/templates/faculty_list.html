@@ -1,0 +1,80 @@
+
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+		<br>
+		<h2> &nbsp Co-Directors</h2>
+	</div>
+	<div class="col-lg-4 col-lg-offset-1">
+	</div>
+</div>
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+		<br><br>
+		<table>
+			<tr>
+				<td align="center" >
+					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/psaty_thumbnail.jpg"></a>
+				</td>
+				<td>
+					<a href="/faculty/psaty">Bruce Psaty, MD, PhD</a>
+				</td>
+			</tr>
+		</table>
+		</div>
+	<div class="col-lg-4 col-lg-offset-1">
+		<br><br>
+		<table>
+			<tr>
+				<td align="center" >
+					<a href="/faculty/nsotoo"><img src="{{ STATIC_URL }}img/nsotoo_thumbnail.jpg"></a>
+				</td>
+				<td>
+					<a href="/faculty/nsotoo">Nona Sotoodehnia, MD, MPH</a>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+<div class="row whiterow">
+	<div class="col-lg-4 col-lg-offset-1">
+    	<br>
+   		<h2>&nbsp Investigators</h2>
+   		<br><br>
+   	</div>
+   	<div class="col-lg-4 col-lg-offset-1"></div>
+</div>
+<div class="whiterow row">
+	<div class="col-lg-4 col-lg-offset-1">
+		<table >
+			{% for chru_person in p_list %}
+<!-- 					<li class="list-group-item">
+					<a href="/faculty/{{ chru_person.uwnetid }}">{{ chru_person.full_name }}</a>
+				</li> -->
+			<tr>
+				<td align="center">
+					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg"></a>
+				</td>
+				<td>
+					<a href="/faculty/{{ chru_person.uwnetid }}">{{ chru_person.full_name }}</a>
+				</td>
+			</tr>
+			{% endfor %}
+
+		</table>
+	</div>
+	<div class="col-lg-4 col-lg-offset-1">
+		<table>
+			{% for chru_person in p_list2 %}
+			<tr>
+				<td align="center" >
+					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg"></a>
+				</td>
+				<td>
+					<a href="/faculty/{{ chru_person.uwnetid }}">{{ chru_person.full_name }}</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+		</div>
+		<br><br>
+	</div>

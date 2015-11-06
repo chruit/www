@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" >
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css' >
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css' >
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' > 
+        <title>{% block title %}CHRU{% endblock %}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+    </head>
+    <body>
+    {% include "nav.html" %}
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-right">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="container" align="center" id="contact">
+            <address >
+                <strong>CHRU</strong><br>
+                Metropolitan Park East Tower<br>
+                1730 Minor Ave, Suite 1360<br>
+                Seattle Washington 98101<br>
+                <abbr title="Phone">206-287-2777
+            </address>
+            <address >
+                <span>chru 
+                    <img height="15" src="{{ STATIC_URL }}img/bw_ampersand.png" width="15"></img>
+                    uw.edu</span>
+                    <br>   
+            </address>
+        </div>
+        <div class="container" align="center" id="disclaimer">
+            <br>
+            <a href="http://maps.google.com/?q=1730%Minor%Avenue%Seattle%WA">Address on Google Maps</a>
+            <br>
+            <br>
+            <a href="http://www.washington.edu/online/privacy">UW Privacy Policy</a>
+            and
+            <a href="http://www.washington.edu/online/terms">UW Site Use Agreement</a> 
+            <br>
+            <br>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ STATIC_URL }}js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="{{ STATIC_URL }}js/vendor/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-30545512-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>
+</html>
