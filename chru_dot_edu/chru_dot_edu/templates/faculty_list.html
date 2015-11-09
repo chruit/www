@@ -13,7 +13,7 @@
 		<table>
 			<tr>
 				<td align="center" >
-					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/psaty_thumbnail.jpg"></a>
+					<a href="/faculty/psaty"><img class="thumb" src="{{ STATIC_URL }}img/psaty_thumbnail.jpg"></a>
 				</td>
 				<td>
 					<a href="/faculty/psaty">Bruce Psaty, MD, PhD</a>
@@ -26,7 +26,7 @@
 		<table>
 			<tr>
 				<td align="center" >
-					<a href="/faculty/nsotoo"><img src="{{ STATIC_URL }}img/nsotoo_thumbnail.jpg"></a>
+					<a href="/faculty/nsotoo"><img class="thumb" src="{{ STATIC_URL }}img/nsotoo_thumbnail.jpg"></a>
 				</td>
 				<td>
 					<a href="/faculty/nsotoo">Nona Sotoodehnia, MD, MPH</a>
@@ -52,7 +52,7 @@
 				</li> -->
 			<tr>
 				<td align="center">
-					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg"></a>
+					<a href="/faculty/{{ chru_person.uwnetid }}"><img class="thumb" src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg" ></a>
 				</td>
 				<td>
 					<a href="/faculty/{{ chru_person.uwnetid }}">{{ chru_person.full_name }}</a>
@@ -67,7 +67,7 @@
 			{% for chru_person in p_list2 %}
 			<tr>
 				<td align="center" >
-					<a href="/faculty/{{ chru_person.uwnetid }}"><img src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg"></a>
+					<a href="/faculty/{{ chru_person.uwnetid }}"><img class="thumb" src="{{ STATIC_URL }}img/{{ chru_person.uwnetid}}_thumbnail.jpg"></a>
 				</td>
 				<td>
 					<a href="/faculty/{{ chru_person.uwnetid }}">{{ chru_person.full_name }}</a>
