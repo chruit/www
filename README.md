@@ -1,8 +1,12 @@
-# www
+# CHRU www
 
-# The webpage for CHRU
+The webpage for CHRU
 
-# build upon Bootstrap v3.3.5 as a submodule
+### Powered by Django
+Currently using version 1.8.1
 
-# use a custom variables.less file to apply custom style
+### Responsive Design
+Build upon Bootstrap v3.3.5 as a submodule
+<br>
+Use modified variables.less file to apply custom style 
 
