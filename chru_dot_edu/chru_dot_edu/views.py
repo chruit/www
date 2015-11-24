@@ -7,18 +7,11 @@ from chru_pubs.forms import *
 from chru_pubs import pubmedUtil
 
 def index(request):
-    #t = Template()
-    #return HttpResponse("Helloooo")
-    #print "helo" + str(request)
     return render(request, 'front.html', {})
-
-# def front(request):
-#     return render(request, 'front.html', {})    
 
 def people(request):
     # investigators
     p_list = Person.objects.filter(employment_type=INVESTIGATOR).exclude(uwnetid='nsotoo').exclude(uwnetid='psaty').order_by('order')
-    print len(p_list)
     half_size = len(p_list)/2 + len(p_list)%2
     p_list2 = p_list[half_size:]
     p_list = p_list[:half_size]
@@ -31,7 +24,6 @@ def people(request):
 
 def staff(request):
     p_list = Person.objects.filter(employment_type=STAFF).order_by('order')
-    #s_list = Person.objects.filter(employment_type=STUDENT).order_by('order')
     return render(request, 'staff.html', {'p_list':p_list})
 
 def collaborators(request):
@@ -43,14 +35,10 @@ def trainees(request):
     return render(request, 'trainees.html', {'s_list':s_list})
 
 def faculty_list(request):
-    #print "list all faculty at this page"
     p_list = Person.objects.filter(employment_type=INVESTIGATOR).exclude(uwnetid='dsisk').exclude(uwnetid='psaty').order_by('order')
-    print len(p_list)
     half_size = len(p_list)/2 + len(p_list)%2
     p_list2 = p_list[half_size:]
     p_list = p_list[:half_size]
-    print len(p_list)
-    print len(p_list2)
     return render(request, 'faculty_list.html', {'p_list':p_list,'p_list2':p_list2})
 
 def faculty(request,faculty):
@@ -58,7 +46,6 @@ def faculty(request,faculty):
     try:
         faculty_member = get_object_or_404(Person, uwnetid=faculty)
         faculty_publications = get_list_or_404(Publication, authors__uwnetid=faculty)
-        print len(faculty_publications)
         publications = faculty_publications
         # paginator = Paginator(faculty_publications, 10)
 
@@ -79,22 +66,12 @@ def faculty(request,faculty):
 def pubmed_list(request):
     #print "list all faculty at this page"
     p_list = Publication.objects.all()
-    # TODO filter on employee type
     return render(request, 'pub_list.html', {'p_list':p_list})
 
 def pubmed(request,pubId):
-    #print pubId
+
     # retrieve from web services 
-
     pub = pubmedUtil.getPubmedInfo( pubId )
-    #print pub
-    # TODO create object if it doesn't exist
-    # For now, just show the stub
-    # try:
-    #     pub= get_object_or_404(Publication, pubmedid=pubId)
-    # except:
-    #     return pubmed_list(request)
-
     return render(request, 'pub.html', {'pubId':pubId,'pub':pub})    
 
 def education(request):
@@ -138,9 +115,7 @@ def contribute(request):
         print "contribute post"
 
         form = ContactForm(request.POST) # A form bound to the POST data
-        #print form.name
         if form.is_valid(): # All validation rules 
-            print 'yaya'
             name = form.cleaned_data['name']
             message = form.cleaned_data['message']
             sender = form.cleaned_data['sender']
@@ -151,17 +126,13 @@ def contribute(request):
             return HttpResponseRedirect('/thanks/') # Redirect after POST
 
         else:
-            print "invalid form"
             return HttpResponseRedirect('/thanks/') # Redirect after POST
 
 
     else:
         print "contribute get?  " + request.method
-        #form = ContactForm() # An unbound form
-
-    return render(request, 'contribute.html', {'form': form,})
-    #return render_to_response('contribute.html', {'form': form,}, context_instance=RequestContext(request))
     
+    return render(request, 'contribute.html', {'form': form,})
 
 def thanks(request):
     return render(request, 'thanks.html')
