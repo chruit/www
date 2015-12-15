@@ -19,10 +19,10 @@ urlpatterns = patterns('',
     url(r'^support/$','chru_dot_edu.views.support'),
 
     # util for web services
-    url(r'^pubmed/$','chru_dot_edu.views.pubmed_list'),
-    url(r'^pubmed/(?P<pubId>\w+)/$','chru_dot_edu.views.pubmed', name='pubmed-stub' ),
+    #url(r'^pubmed/$','chru_dot_edu.views.pubmed_list'),
+    #url(r'^pubmed/(?P<pubId>\w+)/$','chru_dot_edu.views.pubmed', name='pubmed-stub' ),
 
-    url(r'^admin/', include(admin.site.urls)),
+    #url(r'^admin/', include(admin.site.urls)),
 )
 """
 if settings.DEBUG:

@@ -1,11 +1,15 @@
 #! /usr/bin/python
 # Mark Christiansen 2/26/14
-
 import xmltodict, json
 from Bio import Entrez
 from datetime import date
 import sys, getopt
 
+def dumpXML( articleID ):
+    Entrez.email = "chruit@uw.edu"
+    handle = Entrez.efetch(db="pubmed", id=articleID, retmode="xml")
+    xml = handle.read()
+    print xml
 
 def getPubmedInfo( articleID ):
 
@@ -26,8 +30,11 @@ def getPubmedInfo( articleID ):
     Entrez.email = "chruit@uw.edu"
     handle = Entrez.efetch(db="pubmed", id=articleID, retmode="xml")
     xml = handle.read()
+    #print xml
     o = xmltodict.parse(xml)
     print json.dumps(o)
+
+    
     #print o.keys()
     pmarticles = o['PubmedArticleSet']
     #print pmarticles.keys()
@@ -49,17 +56,26 @@ def getPubmedInfo( articleID ):
     journal_issue = journal['JournalIssue']
     #print journal_issue
     isoabbreviation = journal['ISOAbbreviation']
-    print isoabbreviation 
+    #print isoabbreviation 
 
     journal_pubdate = journal_issue['PubDate']
-    print str(journal_pubdate) + "; "
+    #print str(journal_pubdate) + "; "
 
     # doesn't exist for some records
-    journal_volume = journal_issue['Volume']
-    print str(journal_volume) + ": "
+    try:
+        journal_volume = journal_issue['Volume']
+    except:
+        print "No Volume number "
+        journal_volume = None
+
     # doesn't exist for some records
-    journal_issue_val = journal_issue['Issue']
-    print journal_issue_val + "."
+    try:
+        journal_issue_val = journal_issue['Issue']
+    except:
+        print "No Issue number "
+        journal_issue_val = None
+
+
     # doesn't exist for some records
     #pagination = article['Pagination']['MedlinePgn']
 
@@ -67,11 +83,13 @@ def getPubmedInfo( articleID ):
     try:
         month = month[journal_pubdate['Month']]
     except KeyError:
+        print "No Month"
         month = 1
     
     try:
         day = int(journal_pubdate['Day'])
     except KeyError:
+        print "No Day:"
         day = int(1)
 
     #print "month " + str(month)
@@ -82,7 +100,7 @@ def getPubmedInfo( articleID ):
     article_title = article['ArticleTitle']
     
     pagination = article['Pagination']
-    print pagination
+    #print pagination
 
     # construct a string of our author list
     author_list = article['AuthorList']
@@ -126,24 +144,38 @@ def getPubmedInfo( articleID ):
     # generate this in the template for now
     #link = '<a href="http://www.ncbi.nlm.nih.gov/pubmed/' + articleID + '">' + 'PMID:' + articleID + '</a>'
 
-    stub =  author_val + '. ' + article_title + ' ' + str(journal_date_val) + '. ' #+ link
+    stub =  author_val + '. ' + article_title + ' '  #+ link
 
-    #print '---------------------------------------'
-    #print json.dumps(o)
-    
+    # append journal info
+    if journal_volume is not None:    
+        stub = stub + str(journal_volume) + ": "
+
+    if journal_issue_val is not None:
+        stub = stub + journal_issue_val + "."
+
+    stub = stub + journal_title + ' ' + str(journal_date_val) + '. '
+
     return stub
+    
 
 def main(argv):
     pubmedID = ''
     try:
-      opts, args = getopt.getopt(argv,"h:p:",["pubmed="])
+      
+      opts, args = getopt.getopt(argv,"d:h:p:",["pubmed="])
     except getopt.GetoptError:
       print 'pubmedUtil.py -p <pubmedID>'
       sys.exit(2)
     for opt, arg in opts:
       if opt == '-h':
-         print 'pubmedUtil.py -p <pubmedIID>'
+         print 'pubmedUtil.py -d <pubmedIID>  # dumps pubmed XML '
+         print 'pubmedUtil.py -p <pubmedIID>  # will parse pubmed entry'
          sys.exit()
+
+      elif opt in ("-d"):
+         pubmedId = arg
+         dumpXML(pubmedId)
+
       elif opt in ("-p", "--pubmed"):
          pubmedID = arg
          print getPubmedInfo(pubmedID)
