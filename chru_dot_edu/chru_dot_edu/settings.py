@@ -1,7 +1,7 @@
 # Django settings for chru_dot_edu project.
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
-INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = ('localhost','127.0.0.1')
 
 ROOT_URLCONF = 'chru_dot_edu.urls'
 
