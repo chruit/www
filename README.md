@@ -3,7 +3,7 @@
 The webpage for CHRU
 
 ### Powered by Django
-Currently using version 1.8.1
+Currently using version 1.10.2
 
 ### Responsive Design
 Build upon Bootstrap v3.3.5 as a submodule
