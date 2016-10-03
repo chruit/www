@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django import forms
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 #from django.contrib.auth.decorators import login_required
 from forms import PublicationForm
 import models
@@ -18,9 +18,9 @@ class PublicationAdmin(admin.ModelAdmin):
 
     def get_urls(self):
         urls = super(PublicationAdmin, self).get_urls()
-        my_urls = patterns('',
+        my_urls = [
             url(r'^pubmed/(?P<pubmedid>\w+)/$', self.pubmedid,name="pubmed"),
-        )
+        ]
         return my_urls + urls
 
     #@login_required

@@ -42,7 +42,7 @@ def faculty_list(request):
     return render(request, 'faculty_list.html', {'p_list':p_list,'p_list2':p_list2})
 
 def faculty(request,faculty):
-    print faculty
+    #print faculty
     try:
         faculty_member = get_object_or_404(Person, uwnetid=faculty)
         faculty_publications = get_list_or_404(Publication, authors__uwnetid=faculty)
@@ -112,7 +112,7 @@ def contribute(request):
         form = ContactForm()
 
     elif request.method == 'POST': # If the form has been submitted...
-        print "contribute post"
+        #print "contribute post"
 
         form = ContactForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules 
