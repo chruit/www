@@ -1,6 +1,6 @@
 # Django settings for chru_dot_edu project.
 
-DEBUG = True
+DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
