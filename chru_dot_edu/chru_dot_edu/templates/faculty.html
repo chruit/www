@@ -74,24 +74,6 @@
 		</div>
 	</div>
 	{% endif %}	
-	{% if publications %}
-	<div class="row whiterow">
-		<div class="col-lg-12">
-			<br>
-			<div>
-				<h4>Publications</h4>
-				<p>
-					{% for publication in publications %}
-
-						<p>{{ publication.stub|striptags|safe }}
-							<a href="http://www.ncbi.nlm.nih.gov/pubmed/{{publication.pubmedid }}">PMID:{{publication.pubmedid }}</a> </li>
-						</p>
-					{% endfor %}
-				</p>
-			</div>
-		</div>
-	</div>
-	{% endif %}	
 </div>
 
 {% endblock %}
