@@ -26,10 +26,6 @@ def staff(request):
     p_list = Person.objects.filter(employment_type=STAFF).order_by('order')
     return render(request, 'staff.html', {'p_list':p_list})
 
-def collaborators(request):
-    p_list = Person.objects.filter(employment_type=AFFILIATE)
-    return render(request, 'collaborators.html', {'p_list':p_list})
-
 def trainees(request):
     s_list = Person.objects.filter(employment_type=STUDENT).order_by('order')
     return render(request, 'trainees.html', {'s_list':s_list})
@@ -88,9 +84,6 @@ def research_archives(request):
 
 def chs(request):
     return render(request, 'chs.html')
-
-def ghc(request):
-    return render(request, 'ghc.html')    
 
 def charge(request):
     return render(request, 'charge.html')    
